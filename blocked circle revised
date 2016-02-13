@@ -1,0 +1,21 @@
+int x = 20;
+void setup() {
+  size (400, 400);
+  background (0);
+}
+void draw () {
+  while (x < 380){
+    int y = 20;
+    while (y < 380){
+      ellipse (x,y,20,20);
+      y = y + 20;
+    }
+    x = x + 20;
+  }
+}
+
+//shorten use of ellipses by running while within while statements, 
+//as demonstrated in class. 
+//set circles ok, but not within boundery... needs to be shifted over.
+//i suspect tampering with the x interger variable will help this shift. 
+//I am now a master at coding and feel fully prepared to take on my professor/apple.
