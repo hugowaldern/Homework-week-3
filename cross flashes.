@@ -1,0 +1,39 @@
+int hori = 1;
+int verti = 12;
+void setup() {
+  size (700, 700);
+}
+void draw() { 
+  stroke(0); // first time stoke value is set
+  background (255);
+  for (int i=0; i<20; i++) {
+    int x = verti + (i*34);
+    for (int j=0; j<20; j++) {
+      int y = verti + (j*34);
+      line(x+10, y, x+10, y+20);
+      line(x, y+10, x+20, y+10);
+      int f=1;
+      // while (f < 30) {
+
+      // f=f+100;
+    }
+  }
+  int x = 0;
+  while (x < 8) {
+    fill(255); //color of circles
+    noStroke();
+    ellipse(random(700), random(700), 40, 40);//random possiostioning
+    delay(50);
+    x = x + 1;
+  }
+}
+
+//copy cross grid to anmate over. 
+//add white ellipses to flash randomly accross page in order to achieve flashing effect.
+//while or for statement. 
+//I should be able to achieve this by creating 
+//ellipses within a random function to the width of the page.
+//flashes too fast. across scroon (30th of a second increments)
+//need to add a delay from previous exercises. 
+//delay set with proper time...
+//I was able to slow down the flashes with delay. 
