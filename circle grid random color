@@ -1,0 +1,22 @@
+int hori = 20;
+int verti = 10; 
+
+void setup() {
+ size (325,325);
+ background (255);
+  colorMode(HSB, 360, 100, 100);
+ noStroke ();
+ 
+ for (int x=0; x<15;x++){
+   for (int y=0; y<15; y++){
+ fill (random (360), random(360), 100);
+ ellipse(hori+(x*20), hori+(y*20), 15, 15);//spacing
+   }
+ }
+}
+
+// I have copied my code over from my squares variable and have taken out
+//In theory all i have to do is change the color and the shape, as well as its width. 
+//the color is coming out ok, but matching it to the one provvided is 
+//proving to be a challenge.
+//Used the example on processing.org, then applied my own variables to make the color. 
