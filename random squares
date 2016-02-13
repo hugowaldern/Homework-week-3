@@ -1,0 +1,40 @@
+int hori = 20;
+int verti = 10;
+
+void setup() {
+  size (400, 400);
+  background (255);
+  stroke (0);
+  //rectMode(CENTER);   
+  for (int i=0; i<25; i++) { //verticle. 
+    for (int j=0; j<25; j++) {//horizontal... need to add randomness. 
+      if (random(7) > 3) {
+        rect(hori+(i*20), hori+(j*20), verti, verti);
+      }
+    }
+  }
+}
+
+
+//drew first for statement that gashed a black line following my
+//square across grid... will remive I+ statement to stop variables.
+//removed i statements, only 2 squares one in middle, others stack on top...
+//will try to spread out 25 squares horizontally. same result. looking into my rect
+//statement. 
+//removed rect statement from center. 
+//program not registering my r int statement. 
+//needed to clarify what i wanted to do  with the statement, such ass add it in this 
+//case. 
+//ran into the problem of my square spacing and also the squares running
+//off the canvas... will either try to incriment a width statement
+//into my for statement or change canvas size. Time to experiment. 
+//in order to register my rect statement, I must draw for statements
+//for both x and y variables. 
+//took out rectmode center statement. mathmatically lined up, but no help with guidence
+//from rectmode. 
+//added a random statement to be 7 across... going to change recommended
+//>2 to >10 to see difference. difference erased all the squares...
+//why? After further tests, I discovered the ># variable expands and contracts  squares. 
+//Why does the border change when I increment 10 or 30 instead of 20 for hori? seems 
+//strange. rect mode just centers the point of origin, so it
+//shifted my image down to the left. 
