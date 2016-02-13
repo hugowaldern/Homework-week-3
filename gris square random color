@@ -1,0 +1,22 @@
+int hori = 20;
+int verti = 10; 
+
+void setup() {
+ size (400,400);
+ background (255);
+ colorMode (HSB, 100);
+ noStroke ();
+ 
+ for (int i=0; i<25;i++){
+   for (int j=0; j<25; j++){
+ fill (random(100), random(100),100);
+ rect(hori+(i*20), hori+(j*20), verti, verti);
+   }
+ }
+}
+
+// I have copied my code over from my squares variable and have taken out
+//the random statement. In theory, all I should have to do would be a random 
+//fill, such as (random(255), random(255), 100);. 
+//the fill has created all green squares, going to look up color to see whats
+//wrong. 
