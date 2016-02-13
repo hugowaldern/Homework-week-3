@@ -1,0 +1,37 @@
+int num = 50;
+int[] x = new int[num];
+int[] y = new int[num];
+
+void setup() { 
+  size(500, 500);
+  //  noStroke();
+  stroke(255);
+  fill(255, 102);
+}
+
+void draw() {
+  background(0);
+  // Shift the values to the right
+  for (int i = num-1; i > 0; i--) {
+    x[i] = x[i-1];
+    y[i] = y[i-1];
+  }
+  // Add the new values to the beginning of the array
+  x[0] = mouseX;
+  y[0] = mouseY;
+  // Draw the circles
+  for (int i = 0; i < num-1; i++) { //so essentially its marking the first spot in the array butnu8m-1 is required to make this work
+    // ellipse(x[i], y[i], i/2.0, i/2.0);
+    line(x[i], y[i], x[i+1], y[i+1]);
+  }
+}
+
+//I wasnt sure where in this txt the variables stood for arrays. 
+//I was testing the interger statements at first. but ill be honest ~i barely made progress for an hour and a half
+//I sought help at the hybrid lab, and recieved it from dena. 
+//she explained that replacing the ellipse with a line to track could make the animation
+//appear to draw a straigt line without lag. she also showed me that the coordinates must increase by one
+//I want th be very clear. i still dont fully undderstand arrays,and will not 
+//claim this code as my own. I asked for help in the hybrid lab and 
+//dena gave me the answer with an explanation of how to solve the probklem. 
+//if we coukld go over this again in class, I would really appriicate the help. 
